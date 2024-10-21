@@ -4,62 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RedPorturismoTours S.A.S</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav {
-            text-align: center;
-            margin: 1rem 0;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #333;
-            text-decoration: none;
-        }
-        section {
-            padding: 2rem;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        /* Estilo para la galería de imágenes */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 10px;
-            justify-items: center;
-        }
-        .gallery img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <h1>RedPorturismoTours S.A.S</h1>
+    <img src="Fotos/12.jpeg" alt="Logo RedPorturismoTours">
 </header>
 
 <nav>
@@ -80,40 +31,200 @@
         <img src="Fotos/6.jpeg" alt="Foto de viaje 6">
         <img src="Fotos/7.jpeg" alt="Foto de viaje 7">
         <img src="Fotos/8.jpeg" alt="Foto de viaje 8">
-        <img src="Fotos/9.jpeg" alt="Foto de viaje 8">
-        <img src="Fotos/10.jpeg" alt="Foto de viaje 8">
+        <img src="Fotos/9.jpeg" alt="Foto de viaje 9">
+        <img src="Fotos/10.jpeg" alt="Foto de viaje 10">
     </div>
 </section>
 
-<section id="paquetes">
-    <h2 class="section-title">Paquetes Turísticos</h2>
-    <div>
-        <h3>Paquete 1: Aventura en la Montaña</h3>
-        <p>Incluye caminatas guiadas, alojamiento y transporte.</p>
-        <h3>Paquete 2: Relax en la Playa</h3>
-        <p>Disfruta de un fin de semana en las mejores playas.</p>
+<section class="paquetes">
+    <!-- Primer paquete con carrusel -->
+    <div class="paquete">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="sanjose/1.jpeg" alt="San José del Guaviare" class="paquete-img">
+                <img src="sanjose/2.jpg" alt="San José del Guaviare" class="paquete-img">
+                <img src="sanjose/3.jpg" alt="San José del Guaviare" class="paquete-img">
+                <img src="sanjose/4.jpg" alt="San José del Guaviare" class="paquete-img">
+            </div>
+            <button class="prev" onclick="moveSlide(0, -1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(0, 1)">&#10095;</button>
+        </div>
+        <div class="paquete-info">
+            <span class="best-seller">BEST SELLER</span>
+            <h3>San José del Guaviare, Rio de los 7 colores</h3>
+            <p>3 noches | 4 días con todo incluido</p>
+            <p>Salidas a partir de Noviembre</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <a href="#" class="view-tour">Ver tour</a>
+        </div>
+    </div>    
+    
+    <!-- Segundo paquete con carrusel -->
+    <div class="paquete">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="Cocuy/1.jpg" alt="UK" class="paquete-img">
+                <img src="Cocuy/2.jpg" alt="UK" class="paquete-img">
+                <img src="Cocuy/3.jpeg" alt="UK" class="paquete-img">
+                <img src="Cocuy/4.jpeg" alt="UK" class="paquete-img">
+                <img src="Cocuy/5.jpeg" alt="UK" class="paquete-img">
+            </div>
+            <button class="prev" onclick="moveSlide(1, -1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1, 1)">&#10095;</button>
+        </div>
+        <div class="paquete-info">
+            <span class="best-seller">BEST SELLER</span>
+            <h3>Nevado del Cocuy</h3>
+            <p>4 dias | 3 noches con todo incluido</p>
+            <p>Salida todos los fines de semana</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+    </div>
+    
+    <!-- Tercer paquete con carrusel -->
+    <div class="paquete">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="Fotos/1.jpeg" alt="Grecia" class="paquete-img">
+                <img src="Fotos/2.jpeg" alt="Grecia" class="paquete-img">
+                <img src="Fotos/3.jpeg" alt="Grecia" class="paquete-img">
+            </div>
+            <button class="prev" onclick="moveSlide(2, -1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(2, 1)">&#10095;</button>
+        </div>
+        <div class="paquete-info">
+            <span class="best-seller">BEST SELLER</span>
+            <h3>The Greek Islands: Mykonos, Santorini & Crete</h3>
+            <p>14 days | 16 days with Athens extension</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <p>From $4,129</p>
+            <a href="#" class="view-tour">View tour</a>
+        </div>
+    </div>
+
+    <div class="paquete">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="Fotos/1.jpeg" alt="Grecia" class="paquete-img">
+                <img src="Fotos/2.jpeg" alt="Grecia" class="paquete-img">
+                <img src="Fotos/3.jpeg" alt="Grecia" class="paquete-img">
+            </div>
+            <button class="prev" onclick="moveSlide(2, -1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(2, 1)">&#10095;</button>
+        </div>
+        <div class="paquete-info">
+            <span class="best-seller">BEST SELLER</span>
+            <h3>The Greek Islands: Mykonos, Santorini & Crete</h3>
+            <p>14 days | 16 days with Athens extension</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <p>From $4,129</p>
+            <a href="#" class="view-tour">View tour</a>
+        </div>
+    </div>
+    <div class="paquete">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="Fotos/1.jpeg" alt="Grecia" class="paquete-img">
+                <img src="Fotos/2.jpeg" alt="Grecia" class="paquete-img">
+                <img src="Fotos/3.jpeg" alt="Grecia" class="paquete-img">
+            </div>
+            <button class="prev" onclick="moveSlide(2, -1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(2, 1)">&#10095;</button>
+        </div>
+        <div class="paquete-info">
+            <span class="best-seller">BEST SELLER</span>
+            <h3>The Greek Islands: Mykonos, Santorini & Crete</h3>
+            <p>14 days | 16 days with Athens extension</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <p>From $4,129</p>
+            <a href="#" class="view-tour">View tour</a>
+        </div>
+    </div>
+
+    <div class="paquete">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="Fotos/1.jpeg" alt="Grecia" class="paquete-img">
+                <img src="Fotos/2.jpeg" alt="Grecia" class="paquete-img">
+                <img src="Fotos/3.jpeg" alt="Grecia" class="paquete-img">
+            </div>
+            <button class="prev" onclick="moveSlide(2, -1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(2, 1)">&#10095;</button>
+        </div>
+        <div class="paquete-info">
+            <span class="best-seller">BEST SELLER</span>
+            <h3>The Greek Islands: Mykonos, Santorini & Crete</h3>
+            <p>14 days | 16 days with Athens extension</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <p>From $4,129</p>
+            <a href="#" class="view-tour">View tour</a>
+        </div>
+    </div>
+    <div class="paquete">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="Fotos/1.jpeg" alt="Grecia" class="paquete-img">
+                <img src="Fotos/2.jpeg" alt="Grecia" class="paquete-img">
+                <img src="Fotos/3.jpeg" alt="Grecia" class="paquete-img">
+            </div>
+            <button class="prev" onclick="moveSlide(2, -1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(2, 1)">&#10095;</button>
+        </div>
+        <div class="paquete-info">
+            <span class="best-seller">BEST SELLER</span>
+            <h3>The Greek Islands: Mykonos, Santorini & Crete</h3>
+            <p>14 days | 16 days with Athens extension</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <p>From $4,129</p>
+            <a href="#" class="view-tour">View tour</a>
+        </div>
+    </div>
+
+    <div class="paquete">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="Fotos/1.jpeg" alt="Grecia" class="paquete-img">
+                <img src="Fotos/2.jpeg" alt="Grecia" class="paquete-img">
+                <img src="Fotos/3.jpeg" alt="Grecia" class="paquete-img">
+            </div>
+            <button class="prev" onclick="moveSlide(2, -1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(2, 1)">&#10095;</button>
+        </div>
+        <div class="paquete-info">
+            <span class="best-seller">BEST SELLER</span>
+            <h3>The Greek Islands: Mykonos, Santorini & Crete</h3>
+            <p>14 days | 16 days with Athens extension</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <p>From $4,129</p>
+            <a href="#" class="view-tour">View tour</a>
+        </div>
     </div>
 </section>
+
 
 <section id="contacto">
-    <h2 class="section-title">Contacto</h2>
-    <p>Teléfono: +57 3142814787</p>
     <p>Email: redporturismotourscucuta@gmail.com</p>
 </section>
 
 <section id="redes">
     <h2 class="section-title">Redes Sociales</h2>
-    <p>Síguenos en nuestras redes sociales:</p>
-    <p>
-        <a href="https://facebook.com">Facebook</a> | 
-        <a href="https://instagram.com">Instagram</a> | 
-        <a href="https://twitter.com">Twitter</a>
-    </p>
+    <div class="social-icons">
+        <a href="https://wa.me/573142814787" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://www.facebook.com/share/B4YrUMrj2p37LkMD/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/redporturismotourss.a.s/profilecard/?igsh=ODRqMG55Zzhqb240" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>        
+    </div>
 </section>
 
 <footer>
     <p>&copy; 2024 RedPorturismoTours S.A.S - Todos los derechos reservados.</p>
 </footer>
 
+<script src="carrusel.js"></script>
 </body>
 </html>
